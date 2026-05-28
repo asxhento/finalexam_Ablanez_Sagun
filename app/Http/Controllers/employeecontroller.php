@@ -5,7 +5,7 @@ use Illuminate\Support\Fascades\DB;
 use Response;
 use Illuminate\Http\Request;
 use App\Models\employee;
-
+use App\Models\employeemngt;
 class employeecontroller extends Controller
 {
     public function index()
@@ -16,20 +16,21 @@ class employeecontroller extends Controller
 
     public function create()
     {
-        //
+        return view('employee.create');
     }
 
 
     public function store(Request $request)
     {
-        $employee = new employee;
+        $employee = new employee();
         $employee->fname = $request->input('fname');
         $employee->mname = $request->input('mname');
         $employee->lname = $request->input('lname');
         $employee->add = $request->input('add');
         $employee->dob = $request->input('dob');
         $employee->cont = $request->input('cont');
-        $employee->save();
+
+       
     }
 
     public function edit( int $id)

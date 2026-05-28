@@ -16,7 +16,7 @@
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
-            <a href="#" class="btn btn-info">Add New Employee</a> <br> <br>
+            <a href="{{ route('employee.create') }}" class="btn btn-info">Add New Employee</a> <br> <br>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
@@ -34,21 +34,23 @@
                                         </tr>
                                     </thead>
                                     <tbody  >
-                                        @foreach ($employee as $item )
-                                            
+                                   
+                                        {{-- @foreach ($employee as $item) --}}
+                                                
                                         <tr>
-                                            <td>{{ $employee =>fname }}</td>
-                                            <td>{{ $employee =>lname }}</td>
-                                            <td>{{ $employee =>nname }}</td>
-                                            <td>{{ $employee =>add }}</td>
-                                            <td>{{ $employee =>dob }}</td>
-                                            <td>{{ $employee =>cont }}</td>
+              
+                                           {{-- <td>{{ $item-> fname }}</td>
+                                            <td>{{ $item-> lname }}</td>
+                                            <td>{{ $item-> mname }}</td>
+                                            <td>{{ $item-> add }}</td>
+                                            <td>{{ $item-> dob }}</td>
+                                            <td>{{ $item-> cont }}</td>  --}}
                                             <td> 
-                                                <a href="{route='employee.edit', id=$employee->id}" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Edit</a>
-                                                <a href="#" class="btn btn-danger btn-md active" role="button" aria-pressed="true">Delete</a>
+                                                {{-- <a href="{{ route('employee.edit', $item->id) }}" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Edit</a>
+                                                <a href="{{ route('employee.destroy', $item->id) }}" class="btn btn-danger btn-md active" role="button" aria-pressed="true">Delete</a> --}}
                                             </td>
                                         </tr>
-                                         @endforeach
+                                         {{-- @endforeach --}}
                                     </tbody>
                                 </table>
                             </div>
