@@ -35,22 +35,22 @@
                                     </thead>
                                     <tbody  >
                                    
-                                        {{-- @foreach ($employee as $item) --}}
-                                                
+                                        @foreach ($employee as $item)
+                                            
                                         <tr>
               
-                                           {{-- <td>{{ $item-> fname }}</td>
+                                           <td>{{ $item-> fname }}</td>
                                             <td>{{ $item-> lname }}</td>
                                             <td>{{ $item-> mname }}</td>
                                             <td>{{ $item-> add }}</td>
                                             <td>{{ $item-> dob }}</td>
-                                            <td>{{ $item-> cont }}</td>  --}}
+                                            <td>{{ $item-> cont }}</td> 
                                             <td> 
                                                 {{-- <a href="{{ route('employee.edit', $item->id) }}" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Edit</a>
                                                 <a href="{{ route('employee.destroy', $item->id) }}" class="btn btn-danger btn-md active" role="button" aria-pressed="true">Delete</a> --}}
                                             </td>
                                         </tr>
-                                         {{-- @endforeach --}}
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
