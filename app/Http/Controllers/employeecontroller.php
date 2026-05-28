@@ -22,7 +22,14 @@ class employeecontroller extends Controller
 
     public function store(Request $request)
     {
-    //
+        $employee = new employee;
+        $employee->fname = $request->input('fname');
+        $employee->mname = $request->input('mname');
+        $employee->lname = $request->input('lname');
+        $employee->add = $request->input('add');
+        $employee->dob = $request->input('dob');
+        $employee->cont = $request->input('cont');
+        $employee->save();
     }
 
     public function edit( int $id)
